@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const handlebars = require("express-handlebars");
 const app = express();
 const port = 3001;
+
+app.use(express.static(path.join(__dirname, "public")));
 //HTTP Logger
 app.use(morgan("combined"));
 //Template engine
